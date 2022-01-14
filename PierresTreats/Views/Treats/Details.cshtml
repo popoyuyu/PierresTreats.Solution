@@ -8,7 +8,7 @@
 <hr />
 <h3>@Html.DisplayNameFor(model => model.TreatName): @Html.DisplayFor(model => model.TreatName)</h3>
 
-@if (@Model.TreatFlavors.Count == 0)
+@if (@Model.JoinEntities.Count == 0)
 {
   <p>This Treat does not contain any flavors</p>
 }
@@ -29,5 +29,6 @@ else
 }
 
 <p>@Html.ActionLink("Back to treats", "Index")</p>
+<p>@Html.ActionLink("Add a Flavor to this Treat", "AddFlavor", new { id = Model.TreatId })</p>
 <p>@Html.ActionLink("Edit Treat", "Edit", new { id = Model.TreatId })</p>
 <p>@Html.ActionLink("Delete Treat", "Delete", new { id = Model.TreatId })</p>
